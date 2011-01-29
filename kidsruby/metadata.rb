@@ -17,7 +17,7 @@ attribute 'kidsruby/install_path',
   :description  => "The path where the editor project will be installed",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby::default" \],
+  :recipes      => [ "kidsruby::default" ],
   :default      => "/opt/kidsruby"
 
 attribute 'kidsruby/git_repo',
@@ -25,7 +25,7 @@ attribute 'kidsruby/git_repo',
   :description  => "The path to the hosted Git repository",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby::default" \],
+  :recipes      => [ "kidsruby::default" ],
   :default      => "git://github.com/hybridgroup/kidsruby.git"
 
 attribute 'kidsruby/git_branch',
@@ -33,5 +33,5 @@ attribute 'kidsruby/git_branch',
   :description  => "The branch to checkout from the hosted Git repository",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby::default" \],
+  :recipes      => [ "kidsruby::default" ],
   :default      => "release"

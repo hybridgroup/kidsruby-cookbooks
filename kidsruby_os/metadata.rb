@@ -16,7 +16,7 @@ attribute 'kidsruby_os/remaster_root',
   :description  => "The path where the base image ISO is unpacked for remastering",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby_os::chroot_bootstrap" \],
+  :recipes      => [ "kidsruby_os::chroot_bootstrap" ],
   :default      => "/root/tmp"
 
 attribute 'kidsruby_os/chef_directory',
@@ -24,7 +24,7 @@ attribute 'kidsruby_os/chef_directory',
   :description  => "The path to the Chef cookbooks",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby_os::chroot_bootstrap" \],
+  :recipes      => [ "kidsruby_os::chroot_bootstrap" ],
   :default      => "/etc/chef"
 
 attribute 'kidsruby_os/iso_directory',
@@ -32,7 +32,7 @@ attribute 'kidsruby_os/iso_directory',
   :description  => "The path where ISO files are managed",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby_os::iso_prep", "kidsruby_os::iso_build" \],
+  :recipes      => [ "kidsruby_os::iso_prep", "kidsruby_os::iso_build" ],
   :default      => "/iso"
 
 attribute 'kidsruby_os/livecd_version',
@@ -40,7 +40,7 @@ attribute 'kidsruby_os/livecd_version',
   :description  => "The version of the KidsRuby ISO that is built",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby_os::iso_build" \],
+  :recipes      => [ "kidsruby_os::iso_build" ],
   :default      => "0.0.0"
 
 attribute 'kidsruby_os/remaster_iso',
@@ -48,7 +48,7 @@ attribute 'kidsruby_os/remaster_iso',
   :description  => "The base image ISO that is remastered",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby_os::iso_prep" \],
+  :recipes      => [ "kidsruby_os::iso_prep" ],
   :default      => "ubuntu-mini-remix-10.10-i386.iso"
 
 attribute 'kidsruby_os/remaster_iso_url',
@@ -56,5 +56,5 @@ attribute 'kidsruby_os/remaster_iso_url',
   :description  => "The URL where the base image ISO is fetched from",
   :type         => "string",
   :required     => "required",
-  :recipes      => \[ "kidsruby_os::iso_prep" \],
+  :recipes      => [ "kidsruby_os::iso_prep" ],
   :default      => "http://www.ubuntu-mini-remix.org/download/10.10/ubuntu-mini-remix-10.10-i386.iso"
