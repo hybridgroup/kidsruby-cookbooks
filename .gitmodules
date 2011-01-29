@@ -1,6 +1,3 @@
-[submodule "bashrc"]
-	path = bashrc
-	url = git://github.com/fnichol/bashrc.git
 [submodule "rvm"]
 	path = rvm
 	url = git://github.com/phlipper/chef-rvm.git
