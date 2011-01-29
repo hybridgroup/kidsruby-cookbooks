@@ -1,0 +1,7 @@
+maintainer        "KidsRuby"
+maintainer_email  "cookbooks@kidsruby.com"
+license           "Apache 2.0"
+description       "Sets up xfce4 desktop environment"
+version           "0.1.0"
+supports          "ubuntu"
+recipe            "default", "Sets up xfce4 desktop environment"
