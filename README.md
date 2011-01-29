@@ -1,9 +1,9 @@
 # KidsRuby Public Cookbooks for Chef
 
-This repository contains KidsRuby's public cookbooks for Chef. This repository is considered "in development." These cookbooks are currently very focused on building the [KidsRuby OS](https://github.com/hybridgroup/kidsruby-os) distribution, but some should be generic enough to use in other projects.
+This repository contains [KidsRuby](http://kidsruby.com)'s public cookbooks for Chef. This repository is considered "in development." These cookbooks are currently very focused on building the [KidsRuby OS](https://github.com/hybridgroup/kidsruby-os) distribution, but some should be generic enough to use in other projects.
 
 
-## LINKS:
+## Links:
 
 Source:
 
