@@ -4,21 +4,20 @@ This repository contains KidsRuby's public cookbooks for Chef. This repository i
 
 
 ## LINKS:
-=========
 
 Source:
 
-* http://github.com/hybridgroup/kidsruby-cookbooks
+* [http://github.com/hybridgroup/kidsruby-cookbooks](http://github.com/hybridgroup/kidsruby-cookbooks)
 
 Tickets/Issues:
 
-* http://github.com/hybridgroup/kidsruby-cookbooks/issues
+* [http://github.com/hybridgroup/kidsruby-cookbooks/issues](http://github.com/hybridgroup/kidsruby-cookbooks/issues)
 
 KidsRuby Community Site:
 
-* http://kidsruby.com
+* [http://kidsruby.com](http://kidsruby.com)
 
 Chef Documentation:
 
-* http://wiki.opscode.com/display/chef/Home/
-* http://help.opscode.com
+* [http://wiki.opscode.com/display/chef/Home/](http://wiki.opscode.com/display/chef/Home/)
+* [http://help.opscode.com](http://help.opscode.com)
