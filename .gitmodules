@@ -1,0 +1,6 @@
+[submodule "chef-rvm"]
+	path = chef-rvm
+	url = git://github.com/phlipper/chef-rvm.git
+[submodule "bashrc"]
+	path = bashrc
+	url = git://github.com/fnichol/bashrc.git
