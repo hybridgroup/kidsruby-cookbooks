@@ -39,11 +39,11 @@ apt-get install -y zlib1g-dev libssl-dev libreadline5-dev
 apt-get install -y ruby1.8 irb1.8 libopenssl-ruby1.8 libshadow-ruby1.8 ruby1.8-dev
 
 # rubygems
-curl -L 'http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz' | tar xvzf -
+curl -L 'http://production.cf.rubygems.org/rubygems/rubygems-1.4.2.tgz' | tar xvzf -
 cd rubygems* && ruby1.8 setup.rb --no-ri --no-rdoc
 
 # chef
-gem1.8 update --system
+# gem1.8 update --system
 gem1.8 install chef ohai --no-rdoc --no-ri
 
 # symlink ruby and gem commands so chef can find them
