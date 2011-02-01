@@ -8,7 +8,7 @@ execute "rvm install qtbindings" do
   command "rvm default@global gem install qtbindings -q --no-rdoc --no-ri"
   action  :run
   timeout 1800
-  not_if  "bash -c \"source /etc/profile.d/rvm.sh && gem list | grep -q 'qtbindings' >/dev/null\""
+  not_if  %{bash -c "source /etc/profile.d/rvm.sh && gem list | grep -q 'qtbindings' >/dev/null"}
   environment ({"CFLAGS" => "-m32"})
 end
 
@@ -30,11 +30,11 @@ end
 
 # install gem dependencies
 execute "bundle install dependencies" do
-  command [
+  command %{bash -c "#{[
     "source /etc/profile.d/rvm.sh",
     "cd #{node[:kidsruby][:install_path]}",
     "bundle"
-    ].join(" && ")
+    ].join(" && ")}"}
   action  :run
   timeout 1800
   environment ({"CFLAGS" => "-m32"})
