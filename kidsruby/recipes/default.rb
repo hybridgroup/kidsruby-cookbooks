@@ -3,39 +3,11 @@
 # Recipe:: default
 #
 
-# install the qtbindings via rvm
-execute "rvm install qtbindings" do
-  command "rvm default@global gem install qtbindings -q --no-rdoc --no-ri"
-  action  :run
-  timeout 1800
-  not_if  %{bash -c "source /etc/profile.d/rvm.sh && gem list | grep -q 'qtbindings' >/dev/null"}
-  environment ({"CFLAGS" => "-m32"})
-end
+# setup system components
+include_recipe "kidsruby::system"
 
-# checkout the latest editor code from git if it doesn't exist
-git node[:kidsruby][:install_path] do
-  repository node[:kidsruby][:git_repo]
-  branch     node[:kidsruby][:git_branch]
-  action     :checkout
-  not_if     "test -d #{node[:kidsruby][:install_path]}"
-end
+# customize the OS desktop
+include_recipe "kidsruby::desktop"
 
-# update the latest editor code from git if it exists
-git node[:kidsruby][:install_path] do
-  repository node[:kidsruby][:git_repo]
-  branch     node[:kidsruby][:git_branch]
-  action     :sync
-  only_if    "test -d #{node[:kidsruby][:install_path]}/.git"
-end
-
-# install gem dependencies
-execute "bundle install dependencies" do
-  command %{bash -c "#{[
-    "source /etc/profile.d/rvm.sh",
-    "cd #{node[:kidsruby][:install_path]}",
-    "bundle"
-    ].join(" && ")}"}
-  action  :run
-  timeout 1800
-  environment ({"CFLAGS" => "-m32"})
-end
+# install the editor
+include_recipe "kidsruby::editor"

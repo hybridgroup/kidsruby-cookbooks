@@ -1,0 +1,38 @@
+#---------------------------------------------------------------
+# Local (system) bashrc File
+#---------------------------------------------------------------
+
+# Skip this config if we aren't in bash
+[[ -n "${BASH_VERSION}" ]] || return
+
+#---------------------------------------------------------------
+# Set Global Environment Variables
+#---------------------------------------------------------------
+
+
+#---------------------------------------------------------------
+# Set Host Prompt Color
+#---------------------------------------------------------------
+# The following color keywords are permitted:
+#
+# Normal colors
+# black red green yellow blue magenta cyan white default
+#
+# Emphasized (bolded) colors
+# eblack ered egreen eyellow eblue emagenta ecyan ewhite
+#---------------------------------------------------------------
+PROMPT_COLOR=cyan
+
+# If you want a different prompt color when logged in over SSH
+#REMOTE_PROMPT_COLOR=
+
+
+#---------------------------------------------------------------
+# Source RVM
+#---------------------------------------------------------------
+source /etc/profile.d/rvm.sh
+
+#---------------------------------------------------------------
+# Start X if not already running
+#---------------------------------------------------------------
+test -c /dev/pts/0 || startx

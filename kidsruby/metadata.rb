@@ -4,10 +4,13 @@ license           "Apache 2.0"
 description       "Install the KidsRuby learning environment"
 version           "0.1.0"
 supports          "ubuntu"
-recipe            "default", "Install the KidsRuby learning environment"
+recipe            "default", "Install the base KidsRuby learning environment"
+recipe            "editor",  "Install the core KidsRuby editor component"
+recipe            "system",  "Install KidsRuby support files for KidsRuby OS"
+recipe            "desktop", "Setup desktop customizations for KidsRuby"
 
 # dependencies
-%w[git rvm libqt4 xfce4].each do |pkg|
+%w[git rvm gosu libqt4 xfce4].each do |pkg|
   depends pkg
 end
 
