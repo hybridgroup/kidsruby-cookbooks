@@ -35,7 +35,7 @@ source /etc/profile.d/rvm.sh
 #---------------------------------------------------------------
 # Update KidsRuby environment
 #---------------------------------------------------------------
-bash -c 'cd /opt/kidsruby/ && git pull origin release >/dev/null 2>&1 && bundle >/dev/null 2>&1 &'
+bash -c 'cd /opt/kidsruby/ && sudo git pull origin release >/dev/null 2>&1 && bundle >/dev/null 2>&1 &'
 
 #---------------------------------------------------------------
 # Start X if not already running
