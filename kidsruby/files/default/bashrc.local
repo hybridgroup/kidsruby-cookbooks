@@ -40,4 +40,4 @@ bash -c 'cd /opt/kidsruby/ && sudo git pull origin release >/dev/null 2>&1 && bu
 #---------------------------------------------------------------
 # Start X if not already running
 #---------------------------------------------------------------
-test -c /dev/pts/0 || (rm -f /tmp/.X0-lock && startx)
+test -c /dev/pts/0 || (sudo rm -f /tmp/.X0-lock && startx)
