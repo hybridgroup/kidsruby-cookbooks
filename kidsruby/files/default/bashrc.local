@@ -33,6 +33,11 @@ PROMPT_COLOR=cyan
 source /etc/profile.d/rvm.sh
 
 #---------------------------------------------------------------
+# Update KidsRuby environment
+#---------------------------------------------------------------
+bash -c 'cd /opt/kidsruby/ && git pull origin release >/dev/null 2>&1 && bundle >/dev/null 2>&1 &'
+
+#---------------------------------------------------------------
 # Start X if not already running
 #---------------------------------------------------------------
-test -c /dev/pts/0 || startx
+test -c /dev/pts/0 || (rm -f /tmp/.X0-lock && startx)
