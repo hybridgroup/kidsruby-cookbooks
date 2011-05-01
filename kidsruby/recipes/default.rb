@@ -3,8 +3,6 @@
 # Recipe:: default
 #
 
-package "smbios-utils"
-
 # setup system components
 include_recipe "kidsruby::system"
 
@@ -13,3 +11,6 @@ include_recipe "kidsruby::desktop"
 
 # install the editor
 include_recipe "kidsruby::editor"
+
+# setup for use as virtualbox guest
+include_recipe "kidsruby::virtualbox"
