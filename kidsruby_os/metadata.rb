@@ -2,7 +2,7 @@ maintainer        "KidsRuby"
 maintainer_email  "cookbooks@kidsruby.com"
 license           "Apache 2.0"
 description       "KidsRuby OS build host"
-version           "0.1.0"
+version           "0.1.1"
 supports          "ubuntu"
 
 %w[uck squashfs-tools].each do |pkg|
@@ -52,7 +52,7 @@ attribute 'kidsruby_os/remaster_iso',
   :type         => "string",
   :required     => "required",
   :recipes      => [ "kidsruby_os::iso_prep" ],
-  :default      => "ubuntu-mini-remix-10.10-i386.iso"
+  :default      => "ubuntu-mini-remix-11.04-i386.iso"
 
 attribute 'kidsruby_os/remaster_iso_url',
   :display_name => "Remaster ISO URL",
@@ -60,4 +60,4 @@ attribute 'kidsruby_os/remaster_iso_url',
   :type         => "string",
   :required     => "required",
   :recipes      => [ "kidsruby_os::iso_prep" ],
-  :default      => "http://www.ubuntu-mini-remix.org/download/10.10/ubuntu-mini-remix-10.10-i386.iso"
+  :default      => "http://www.ubuntu-mini-remix.org/download/11.04/ubuntu-mini-remix-11.04-i386.iso"
