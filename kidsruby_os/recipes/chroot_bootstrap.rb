@@ -21,6 +21,15 @@ end
   end
 end
 
+# prime rvm profile helper
+template "#{node[:kidsruby_os][:remaster_root]}/remaster-root/etc/profile.d/rvm.sh" do
+  source "rvm.sh.erb"
+  owner  "root"
+  group  "root"
+  mode   "0755"
+  action :create
+end
+
 # copy the host chef configuration to the chroot
 execute "Copy Chef to the chroot" do
   command [
