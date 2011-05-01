@@ -3,8 +3,6 @@
 # Recipe:: default
 #
 
-package "smbios-utils"
-
 # prep the livecd iso environment
 include_recipe "kidsruby_os::iso_prep"
 
