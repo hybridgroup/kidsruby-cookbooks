@@ -3,8 +3,11 @@ maintainer_email  "cookbooks@kidsruby.com"
 license           "Apache 2.0"
 description       "KidsRuby OS build host"
 version           "0.1.0"
-depends           "uck"
 supports          "ubuntu"
+
+%w[uck squashfs-tools].each do |pkg|
+  depends pkg
+end
 
 recipe            "default",          "This recipe bootstraps an EC2 instance for use in remastering the KidsRuby OS distribution"
 recipe            "iso_prep",         "This recipe prepares the base image ISO for remastering"

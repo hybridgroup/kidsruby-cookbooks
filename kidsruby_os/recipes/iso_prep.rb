@@ -3,6 +3,8 @@
 # Recipe:: iso_prep
 #
 
+package "squashfs-tools"
+
 # ensure the working directory exists
 directory node[:kidsruby_os][:iso_directory] do
   owner  "root"
