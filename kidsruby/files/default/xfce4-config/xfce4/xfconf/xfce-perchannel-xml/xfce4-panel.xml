@@ -70,7 +70,7 @@
     </property>
     <property name="plugin-13" type="string" value="separator"/>
     <property name="plugin-14" type="string" value="directorymenu">
-      <property name="base-directory" type="string" value="/home/phlipper"/>
+      <property name="base-directory" type="string" value="/home/ubuntu"/>
     </property>
   </property>
 </channel>
