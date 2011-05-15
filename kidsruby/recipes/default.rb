@@ -11,6 +11,3 @@ include_recipe "kidsruby::desktop"
 
 # install the editor
 include_recipe "kidsruby::editor"
-
-# setup for use as virtualbox guest
-include_recipe "kidsruby::virtualbox"
