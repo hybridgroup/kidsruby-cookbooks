@@ -3,6 +3,9 @@
 # Recipe:: desktop
 #
 
+package "xubuntu-artwork"
+package "xubuntu-icon-theme"
+
 # setup the default desktop folder for users
 directory "/etc/skel/Desktop" do
   owner "root"
