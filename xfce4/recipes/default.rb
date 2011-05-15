@@ -3,4 +3,6 @@
 # Recipe:: default
 #
 
-package "xfce4"
+%w[xfce4 xfce4-goodies].each do |pkg|
+  package pkg
+end
