@@ -3,6 +3,6 @@
 # Recipe:: default
 #
 
-%w[xfce4 xfce4-goodies].each do |pkg|
+%w[xfce4 xfce4-goodies xfce4-terminal].each do |pkg|
   package pkg
 end
