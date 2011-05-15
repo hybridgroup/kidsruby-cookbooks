@@ -3,6 +3,10 @@
 # Recipe:: system
 #
 
+%w[acpi acpi-support hibernate pmtools].each do |pkg|
+  package pkg
+end
+
 # set the system bashrc file
 cookbook_file "/etc/bash/bashrc.local" do
   source "bashrc.local"
